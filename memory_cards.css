@@ -1,0 +1,258 @@
+p {
+  font-size: 40px;
+  margin: 20px;
+  font-family: cursive;
+}
+
+body {
+  background-color: #cfbbe3;
+}
+
+.out {
+  width: 500px;
+  height: 480px;
+  background-color: #eec990;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  height: 380px;
+}
+
+.items {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 10px 10px 0px 0px;
+  perspective: 1000px;
+}
+
+.game .items .view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.25s linear;
+}
+
+.items.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-13px);
+  }
+
+  40% {
+    transform: translateX(13px);
+  }
+
+  60% {
+    transform: translateX(-8px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+}
+
+.card_front {
+  background-color: white;
+  font-size: 50px;
+
+}
+
+.items .card_back {
+  transform: rotateY(-180deg);
+}
+
+.items.flip .card_front {
+  transform: rotateY(180deg);
+}
+
+.items.flip .card_back {
+  transform: rotateY(0deg);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.last {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+.timer {
+  margin: auto;
+}
+
+.flipCount {
+  margin: auto;
+}
+
+.button {
+  margin: auto;
+}
+
+#reset {
+  width: 90px;
+  height: 50px;
+  font-size: 20px;
+  font-family: cursive;
+  border-radius: 10px;
+  border-style: none;
+
+}
+
+#reset:hover {
+  background-color: rgb(112, 172, 112);
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 650px) {
+  p {
+    font-size: 2em;
+    margin: 1em;
+  }
+
+  .out {
+    width: 25em;
+    height: 25em;
+  }
+
+
+  .game {
+    width: 24em;
+    height: 18em;
+  }
+
+
+
+  .items {
+    width: 4em;
+    height: 4em;
+    margin: 0.5em 0.5em 0em 0em;
+  }
+
+
+  .timer .flipCount {
+    font-size: 1em;
+  }
+
+  .card_front {
+    font-size: 2.5em;
+  }
+
+
+  #reset {
+    width: 4.2em;
+    font-size: 1em;
+    height: 2.2em;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 500px) {
+  p {
+    font-size: 1.4em;
+    margin: 1em;
+  }
+
+  .out {
+    width: 20em;
+    height: 20em;
+  }
+
+
+  .game {
+    width: 19em;
+    height: 16em;
+  }
+
+
+
+  .items {
+    width: 3em;
+    height: 3em;
+    margin: 0.4em 0.4em 0em 0em;
+  }
+
+
+  .last {
+    font-size: 1em;
+  }
+
+  .card_front {
+    font-size: 2em;
+  }
+
+
+  #reset {
+    width: 3.8em;
+    height: 2em;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  p {
+    font-size: 0.9em;
+    margin: 1em;
+  }
+
+  .out {
+    width: 11em;
+    height: 12em;
+  }
+
+
+  .game {
+    width: 10em;
+    height: 9em;
+  }
+
+
+
+  .items {
+    width: 1.5em;
+    height: 1.6em;
+    margin: 0.3em 0.3em 0em 0em;
+  }
+
+
+  .last {
+    font-size: 0.6em;
+  }
+
+  .card_front {
+    font-size: 0.5em;
+    align-content:center;
+  }
+
+
+  #reset {
+    width: 3.5em;
+height: 2em;
+font-size: 1.1em;
+  }
+}
